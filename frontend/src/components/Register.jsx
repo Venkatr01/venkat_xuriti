@@ -118,7 +118,7 @@ export default function Register() {
               sx={{ mt: 3, mb: 2 }}
               disabled={loading} 
             >
-              {loading ? <CircularProgress size={24} /> : 'Register'} {/* Show spinner or text */}
+              {loading ? <CircularProgress size={24} /> : 'Register'}
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
