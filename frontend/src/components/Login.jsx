@@ -13,11 +13,15 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from "react-router-dom";
+import CircularProgress from '@mui/material/CircularProgress';
+import { useState } from 'react';
 
 
 const defaultTheme = createTheme();
 
 export default function Login() {
+
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -26,13 +30,23 @@ export default function Login() {
     const username= data.get('email')
     const password = data.get('password')
 
-      await axios.post("https://venkat-xuriti.onrender.com/login", {
+    setLoading(true);
+
+    try {
+        await axios.post("https://venkat-xuriti.onrender.com/login", {
           username,
           password
       }).then((res) => {
           localStorage.setItem("token", res.data.token);
           navigate('/dashboard');
       })
+    } catch (error) {
+      console.error("Error during login:", error);
+    }finally{
+      setLoading(false);
+    }
+
+
   };
 
   return (
@@ -79,7 +93,7 @@ export default function Login() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Login
+              {loading ? <CircularProgress size={24} /> : 'login'}            
             </Button>
             <Grid container>
               <Grid item>
