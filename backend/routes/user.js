@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 const zod = require("zod");
 const { User } = require("../db");
@@ -103,14 +102,12 @@ router.put("/", authMiddleware, async (req, res) => {
     })
 })
 
-router.get("/all",authMiddleware,async (req,res)=>{
+router.get("/allusers",authMiddleware,async (req,res)=>{
 
         const usersData = await User.find()
         const usernames = usersData.users;
 
     res.json({
-    
-    
         usernames,
         usersData
     })
