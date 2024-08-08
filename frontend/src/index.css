@@ -1,11 +1,4 @@
-html{
-    /* background-color: rgb(247, 239, 244); */
-    /* opacity:10; */
-    /* background-image: url("https://wallpapercave.com/wp/wp3369520.jpg"); */
-}
-
 .landing{
-    /* background-color: rgb(230, 110, 110); */
     display: flex;
     justify-content: center;
     margin-top: 250px;
@@ -14,17 +7,32 @@ html{
 .loginBtn{
     background-color: black;
 }
+.fonts{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
-/* .personIcon{
-    margin-right: 5px;
-    margin-top: 15px;
-} */
-/* .centerIt{
-    justify-content: center;
-    align-items: center;
-} */
+.wlcm{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+    margin-left: 200px;
+}
 
-/* ul{
-    justify-content: center;
-    align-items: center;
-} */
+.names{
+    font-weight: 300;
+    font-size: 23px;
+    margin-bottom: 15px;
+    margin-left: 150px;
+}
+
+.register{
+    margin-top: 10px;
+    font-size: x-large;
+}
+.space{
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
