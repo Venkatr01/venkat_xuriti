@@ -27,6 +27,8 @@ This is an Assessment given by xuriti software for the first round.
 
     5.No need to run backend files as it is already deployed on render.com(backend hosting service).
 
+
+
    
 
     
@@ -55,6 +57,8 @@ On successful regisration the user details are posted to backend and user is ass
 The user password is hashed using Bycrypt and stored in mongoDB database.
 
 The dashboard includes a button  and when clicked it sends the users JWT token to the backend and verifies it and upon verifying it sends the registered users data which is then rendered in the frontend.
+
+The below image shows that the users password is hashed and then stored in the database.
 
 ![Password Hashed Image](./frontend/src/assets/hashedimg.png)
 
