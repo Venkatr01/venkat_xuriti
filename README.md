@@ -64,6 +64,8 @@ The dashboard includes a button  and when clicked it sends the users JWT token t
 
 The below image shows that the users password is hashed and then stored in the database.
 
+## Password Hashing
+
 ![Password Hashed Image](./frontend/src/assets/hashedimg.png)
 
 
