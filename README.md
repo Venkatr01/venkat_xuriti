@@ -46,9 +46,11 @@ This is an Assessment given by xuriti software for the first round.
 
 ## About  the project
 
-Project is built using React and Material-UI for frontend.
+Frontend: React, Material-UI
 
-MongoDB, Express, Node.js, JWT , Bycrypt, mongoose for backend.  
+Backend: MongoDB, Express, Node.js, JWT , Bycrypt, mongoose.  
+
+Others: github, Render, Vercel.
 
 Registration Page and Login page checks whether all the fields are filled when submitted (client side) and if password and confirm password is same.
 
