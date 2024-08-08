@@ -20,17 +20,20 @@
     font-style: normal;
     margin-left: 200px;
 }
+.outerDesign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .registerDesign{
     border-radius: 30px;
     margin-top: 40px;
     width: 500px;
-    margin-left: 400px;
     height: 550px;
     border: 2px solid black;
 }
 .loginStyle{
-    margin-left: 400px;
     border-radius: 30px;
     margin-top: 40px;
     height: 500px;
