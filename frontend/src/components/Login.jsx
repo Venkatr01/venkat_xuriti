@@ -55,7 +55,8 @@ export default function Login() {
   };
 
   return (
-      <Container component="main" maxWidth="xs">
+    <div className='loginStyle'>
+            <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -111,5 +112,6 @@ export default function Login() {
           </Box>
         </Box>
       </Container>
+    </div>
   );
 }

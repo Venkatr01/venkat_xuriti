@@ -55,7 +55,8 @@ export default function Register() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <div className='registerDesign'>
+      <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -131,5 +132,6 @@ export default function Register() {
         </Box>
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
