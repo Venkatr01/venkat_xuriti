@@ -25,6 +25,8 @@ This is an Assessment given by xuriti software for the first round.
 
     npm run dev
 
+    5.No need to run backend files as it is already deployed on render.com(backend hosting service).
+
    
 
     
