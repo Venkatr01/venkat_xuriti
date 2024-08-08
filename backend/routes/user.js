@@ -4,8 +4,9 @@ const zod = require("zod");
 const { User } = require("../db");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const { JWT_SECRET } = require("../config");
 const { authMiddleware } = require("../middleware");
+require('dotenv').config();
+const secret = process.env.JWT_SECRET;
 
 const signupBody = zod.object({
     username: zod.string(),
@@ -40,11 +41,11 @@ router.post("/register", async (req, res) => {
 
     const token = jwt.sign({
         userId
-    }, JWT_SECRET);
+    }, secret);
 
     res.json({
         message: "User created successfully",
-        token: token
+        token: token,
     });
 });
 
@@ -71,7 +72,7 @@ router.post("/login", async (req, res) => {
         if (isPasswordValid) {
             const token = jwt.sign({
                 userId: user._id
-            }, JWT_SECRET);
+            }, secret);
 
             res.json({
                 token: token
@@ -82,31 +83,6 @@ router.post("/login", async (req, res) => {
 
     res.status(411).json({
         message: "Error while logging in"
-    });
-});
-
-const updateBody = zod.object({
-    password: zod.string().optional(),
-    firstName: zod.string().optional(),
-    lastName: zod.string().optional(),
-});
-
-router.put("/", authMiddleware, async (req, res) => {
-    const { success } = updateBody.safeParse(req.body);
-    if (!success) {
-        res.status(411).json({
-            message: "Error while updating information"
-        });
-    }
-
-    if (req.body.password) {
-        req.body.password = await bcrypt.hash(req.body.password, 10);
-    }
-
-    await User.updateOne({ _id: req.userId }, req.body);
-
-    res.json({
-        message: "Updated successfully"
     });
 });
 
