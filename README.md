@@ -56,7 +56,7 @@ The user password is hashed using Bycrypt and stored in mongoDB database.
 
 The dashboard includes a button  and when clicked it sends the users JWT token to the backend and verifies it and upon verifying it sends the registered users data which is then rendered in the frontend.
 
-![Password Hashed Image](./frontend/assets/hashedimg.png)
+![Password Hashed Image](./frontend/src/assets/hashedimg.png)
 
 
 
