@@ -23,11 +23,11 @@ function UserList() {
 
   return (
     <div>
-      <h1>Registered Users:</h1>
+      <div className='fonts register'>Registered Users:</div>
       
-      <ul>
+      <ul className='fonts'>
         {users.map(user => (
-          <div className='centerIt' key={user._id}> <h4>{user.username}</h4></div>
+          <div className='fonts names' key={user._id}>{user.username}</div>
         ))}
       </ul>
       <div>

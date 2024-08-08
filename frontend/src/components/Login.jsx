@@ -30,6 +30,11 @@ export default function Login() {
     const username= data.get('email')
     const password = data.get('password')
 
+    if(username == '' || password == ''){
+      alert("Please enter all details")
+      return
+    }
+
     setLoading(true);
 
     try {
@@ -72,7 +77,7 @@ export default function Login() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Username"
               name="email"
               autoComplete="email"
               autoFocus
@@ -92,6 +97,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              disabled={loading} 
             >
               {loading ? <CircularProgress size={24} /> : 'login'}            
             </Button>

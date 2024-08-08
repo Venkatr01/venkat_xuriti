@@ -17,8 +17,8 @@ function UserNames() {
     
   return (
     <div>
-      <h1 className='wlcm'>Welcome to Venkat's Xuriti Assessment</h1>
-      <h2>Click the below button to fetch registered users data from backend</h2>
+      <h1 className='wlcm'>Welcome to Venkat's Xuriti Assessment</h1><br />
+      <h2 className='fonts'>Click the below button to fetch registered users data from backend</h2>
       <Button onClick={handleButtonClick} variant="outlined">Users List</Button>
         {showUserList && <UserList />}
     </div>
