@@ -46,6 +46,8 @@ This is an Assessment given by xuriti software for the first round.
 
 ## About  the project
 
+### Technologies Used
+
 Frontend: React, Material-UI
 
 Backend: MongoDB, Express, Node.js, JWT , Bycrypt, mongoose.  
