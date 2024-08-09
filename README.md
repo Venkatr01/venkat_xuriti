@@ -27,19 +27,6 @@ This is an Assessment given by xuriti software for the first round.
 
     5.No need to run backend files as it is already deployed on render.com(backend hosting service).
 
-
-
-   
-
-    
-
-    
-    
-
-    
-
-
-
 ## Checkout the deployed project live
 
 [Venkat-AssessmentLive](https://venkat-xuriti.vercel.app/)
